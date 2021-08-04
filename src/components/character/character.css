@@ -1,0 +1,33 @@
+.character-card {
+  background-color: #292929;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  border-radius: 0.3em;
+  border: 1px solid rgb(58, 58, 58);
+}
+
+.character-card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: 0.5s;
+}
+
+.character-card__image {
+  height: inherit;
+  width: 100%;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+}
+.character-card__info {
+  text-align: left;
+  display: grid;
+  padding: 1.5em 1em;
+}
+
+h2,
+p {
+  padding-bottom: 0.5rem;
+}
+
+.character-card__info * {
+  margin: 0;
+}

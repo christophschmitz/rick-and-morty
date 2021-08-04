@@ -2,6 +2,14 @@ import './style.css';
 import { createCharacterCard } from './components/character/character';
 import { createElement } from './utils/createElement';
 
+const char = {
+  name: 'Morty Smith',
+  image: 'https://rickandmortyapi.com/api/character/avatar/28.jpeg',
+  status: 'Dead',
+  species: 'Human',
+  origin: 'Earth (C-137)',
+};
+
 const header = createElement('header', {
   childElements: [
     createElement('img', {
@@ -19,12 +27,12 @@ const mainElement = createElement('main', {
     createElement('div', {
       className: 'characterContainer',
       childElements: [
-        createCharacterCard(),
-        createCharacterCard(),
-        createCharacterCard(),
-        createCharacterCard(),
-        createCharacterCard(),
-        createCharacterCard(),
+        createCharacterCard(char),
+        createCharacterCard(char),
+        createCharacterCard(char),
+        createCharacterCard(char),
+        createCharacterCard(char),
+        createCharacterCard(char),
       ],
     }),
   ],

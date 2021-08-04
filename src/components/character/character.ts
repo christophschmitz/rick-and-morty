@@ -1,5 +1,6 @@
-import './character.css';
+import styles from './character.module.css';
 import { createElement } from '../../utils/createElement';
+import type { Character } from '../../types';
 
 export function createCharacterCard({
   name,
@@ -7,29 +8,39 @@ export function createCharacterCard({
   status,
   species,
   origin,
-}): HTMLElement {
+}: Character): HTMLElement {
   return createElement('div', {
-    className: 'character-card',
+    className: styles.card,
     childElements: [
       createElement('img', {
-        className: 'character-card__image',
+        className: styles.cardImage,
         src: image,
       }),
       createElement('article', {
-        className: 'character-card__info',
+        className: styles.cardinfo,
         childElements: [
-          createElement('h2', { innerText: name }),
+          createElement('h2', {
+            className: styles.name,
+            innerText: name,
+          }),
           createElement('div', {
             childElements: [
-              createElement('h5', { innerText: 'Status:' }),
+              createElement('h5', {
+                className: styles.subheading,
+                innerText: 'Status:',
+              }),
               createElement('p', {
+                className: styles.text,
                 innerText:
                   (status === 'Alive' ? '💚' : '💀') + `${status} - ${species}`,
               }),
             ],
           }),
-          createElement('h5', { innerText: 'Origin:' }),
-          createElement('p', { innerText: origin }),
+          createElement('h5', {
+            className: styles.subheading,
+            innerText: 'Origin:',
+          }),
+          createElement('p', { className: styles.text, innerText: origin }),
         ],
       }),
     ],

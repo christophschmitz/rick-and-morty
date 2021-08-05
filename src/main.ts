@@ -2,6 +2,9 @@ import './style.css';
 import { createCharacterCard } from './components/character/character';
 import { createElement } from './utils/createElement';
 import type { Character } from './types';
+import type { CharacterFromAPI } from './types';
+import type { AllCharactersFromApi } from './types';
+
 import { getCharacters } from './utils/api';
 
 console.log(await getCharacters());

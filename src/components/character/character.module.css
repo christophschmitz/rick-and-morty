@@ -1,0 +1,39 @@
+.card {
+  background-color: #2b2a2d;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  border-radius: 0.3em;
+  border: 1px solid rgb(58, 58, 58);
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: 0.5s;
+}
+
+.cardImage {
+  height: inherit;
+  width: 100%;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+}
+.cardinfo {
+  text-align: left;
+  display: grid;
+  padding: 1.5em 1em;
+}
+
+.name {
+  padding-bottom: 0.5rem;
+}
+.text {
+  padding-bottom: 0.5rem;
+}
+
+.character-card__info * {
+  margin: 0;
+}
+
+.subheading {
+  color: #bb86fc;
+}

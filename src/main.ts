@@ -2,29 +2,10 @@ import './style.css';
 import { createCharacterCard } from './components/character/character';
 import { createElement } from './utils/createElement';
 import type { Character } from './types';
-import type { CharacterFromAPI } from './types';
-import type { AllCharactersFromApi } from './types';
 
 import { getCharacters } from './utils/api';
 
-console.log(await getCharacters());
-
-const characters: Character[] = [
-  {
-    name: 'Morty Smith',
-    image: 'https://rickandmortyapi.com/api/character/avatar/28.jpeg',
-    status: 'Dead',
-    species: 'Human',
-    origin: 'Earth (C-137)',
-  },
-  {
-    name: 'Morty Smith',
-    image: 'https://rickandmortyapi.com/api/character/avatar/28.jpeg',
-    status: 'Dead',
-    species: 'Human',
-    origin: 'Earth (C-137)',
-  },
-];
+const characters: Character[] = await getCharacters();
 
 const header = createElement('header', {
   childElements: [

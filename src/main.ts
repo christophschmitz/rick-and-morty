@@ -3,6 +3,9 @@ import { createCharacterCard } from './components/character/character';
 import { createElement } from './utils/createElement';
 import type { Character } from './types';
 import { getCharacters } from './utils/api';
+
+console.log(await getCharacters());
+
 const characters: Character[] = [
   {
     name: 'Morty Smith',

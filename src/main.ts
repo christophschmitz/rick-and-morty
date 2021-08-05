@@ -2,7 +2,7 @@ import './style.css';
 import { createCharacterCard } from './components/character/character';
 import { createElement } from './utils/createElement';
 import type { Character } from './types';
-
+import { getCharacters } from './utils/api';
 const characters: Character[] = [
   {
     name: 'Morty Smith',
